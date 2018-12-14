@@ -1,0 +1,31 @@
+{
+    "name": "@ngxux/ngxux-mat-dialog",
+    "version": "0.0.0",
+    "description": "Angular 7+ User Interface Library",
+    "author": {
+        "email": "matthew@matthewdavis.io",
+        "name": "Matthew Davis",
+        "url": "https://matthewdavis.io"
+    },
+    "license": "MIT",
+    "keywords": [
+        "ngxux",
+        "angular",
+        "material"
+    ],
+    "bugs": {
+        "email": "matthew@matthewdavis.io",
+        "url": "https://github.com/mateothegreat/ngxux-mat-dialog/issues"
+    },
+    "homepage": "https://ngxux.com",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mateothegreat/ngxux-mat-dialog.git"
+    },
+    "peerDependencies": {
+        "@angular/common": "^7.0.0",
+        "@angular/core": "^7.0.0",
+        "@angular/cdk": "^7.1.1",
+        "@angular/material": "^7.1.1"
+    }
+}

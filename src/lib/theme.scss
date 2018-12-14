@@ -1,0 +1,66 @@
+$theme-content-background: #EBF0F2;
+$theme-left-toolbar-background: #FEFFFE;
+$theme-top-toolbar-background: #0390EA;
+
+$theme-layout-top-header-title-color: #EBF0F2;
+$theme-layout-top-header-application-color: #85d4ff;
+
+$theme-left-toolbar-icon-color: #78909B;
+$theme-left-toolbar-item-active-color: #0390EA;
+$theme-left-toolbar-item-active-background: #E3F0F8;
+
+$theme-layout-page-header-color: #78909B;
+$theme-layout-page-header-background: #F6F7F8;
+$theme-layout-page-header-button-background: #7A919E;
+$theme-layout-page-header-button-color: #FEFFFE;
+
+$theme-dialog-header-background: #FEFFFE;
+$theme-dialog-header-color: #78909B;
+$theme-dialog-content-background: #FEFFFE;
+$theme-dialog-content-table-background: #F7F8F9;
+$theme-dialog-content-table-hover-background: #E3F0F8;
+$theme-dialog-footer-background: #FEFFFE;
+$theme-dialog-footer-button-normal-background: #7A919E;
+$theme-dialog-footer-button-normal-color: #FEFFFE;
+$theme-dialog-footer-button-delete-background: #ff0d6c;
+$theme-dialog-footer-button-delete-color: #FEFFFE;
+$theme-dialog-footer-button-next-background: #0390EA;
+$theme-dialog-footer-button-next-color: #FEFFFE;
+
+$theme-table-header-button-color: #666;
+$theme-table-header-button-disabled-color: #e1e1e1;
+$theme-table-header-button-hover-color: #0390EA;
+$theme-table-row-selected-background: #0390EA;
+
+.content-inset {
+    
+    background: $theme-dialog-content-table-background;
+    box-shadow: inset 0 7px 7px -7px #999, inset 0 -7px 7px -7px #999;
+    
+}
+
+mat-dialog-container {
+    
+    padding: 0 !important;
+    background: $theme-dialog-content-background !important;
+    
+}
+
+
+.form-tabled {
+    
+    width: 100%;
+    
+    td {
+        
+        width: 50%;
+        
+    }
+    
+    mat-form-field {
+        
+        width: 100%;
+        
+    }
+    
+}

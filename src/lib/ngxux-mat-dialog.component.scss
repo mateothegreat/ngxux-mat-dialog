@@ -1,0 +1,104 @@
+@import 'theme';
+
+:host {
+    
+    .wrapper {
+        
+        height: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        
+        .header {
+            
+            flex: 0 1 47px;
+            
+            display: flex;
+            align-items: center;
+            
+            background: #FEFFFE;
+            padding: 20px;
+            
+            .title {
+                
+                flex: 1;
+                color: #78909B;
+                
+            }
+            
+            .buttons {
+                
+                mat-icon {
+                    
+                    cursor: pointer;
+                    
+                }
+                
+            }
+            
+        }
+        
+        .content {
+            
+            background: #FEFFFE;
+            flex: 1;
+            overflow: auto;
+            
+        }
+        
+        .footer {
+            
+            flex: 0 1 47px;
+            
+            display: flex;
+            padding: 20px 20px 10px;
+            background: $theme-dialog-footer-background;
+            
+            button {
+                
+                font-variant: all-small-caps;
+                
+            }
+            
+            .buttons-left {
+                
+                button {
+                    
+                    background: $theme-dialog-footer-button-normal-background;
+                    color: $theme-dialog-footer-button-normal-color;
+                    
+                }
+                
+                button.delete {
+                    
+                    background: $theme-dialog-footer-button-delete-background;
+                    color: $theme-dialog-footer-button-delete-color;
+                    
+                    margin-left: 15px;
+                    
+                }
+                
+            }
+            
+            .message {
+                
+                flex: 1;
+                
+            }
+            
+            .buttons-right {
+                
+                button {
+                    
+                    background: $theme-dialog-footer-button-next-background;
+                    color: $theme-dialog-footer-button-next-color;
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}
