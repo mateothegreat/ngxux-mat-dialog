@@ -63,7 +63,7 @@ import { NgxuxMatDialogService }    from './ngxux-mat-dialog.service';
                 <div class="buttons-right">
 
                     <button *ngIf="ngxuxMatDialogService.getInstance(id).nextShow"
-                            (click)="ngxuxMatDialogService.onNextClick()"
+                            (click)="ngxuxMatDialogService.onNextClick(id)"
                             mat-raised-button>
 
                         {{ ngxuxMatDialogService.getInstance(id).nextLabel }}
