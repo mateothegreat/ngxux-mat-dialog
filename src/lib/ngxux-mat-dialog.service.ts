@@ -1,16 +1,12 @@
-import { ComponentType }                    from '@angular/cdk/portal';
-import { EventEmitter, Injectable, Output } from '@angular/core';
-import { MatDialog, MatDialogConfig }       from '@angular/material';
-import { NgxuxMatDialogSettings }           from './ngxux-mat-dialog-settings';
+import { ComponentType }              from '@angular/cdk/portal';
+import { Injectable }                 from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material';
+import { NgxuxMatDialogSettings }     from './ngxux-mat-dialog-settings';
 
 @Injectable({
     providedIn: 'root'
 })
 export class NgxuxMatDialogService {
-
-    @Output() public nextClick = new EventEmitter();
-    @Output() public backClick = new EventEmitter();
-    @Output() public deleteClick = new EventEmitter();
 
     private instances: Array<NgxuxMatDialogSettings> = [];
 

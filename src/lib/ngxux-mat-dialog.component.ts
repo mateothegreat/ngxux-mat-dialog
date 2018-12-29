@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { NgxuxMatDialogService }    from './ngxux-mat-dialog.service';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { NgxuxMatDialogService }                  from './ngxux-mat-dialog.service';
 
 @Component({
 
@@ -36,7 +36,7 @@ import { NgxuxMatDialogService }    from './ngxux-mat-dialog.service';
                 <div class="buttons-left">
 
                     <button *ngIf="ngxuxMatDialogService.getInstance(id).backShow"
-                            (click)="ngxuxMatDialogService.onBackClick(id)"
+                            (click)="ngxuxMatDialogService.onBackClick(id); onBackClick(id)"
                             mat-raised-button>
 
                         {{ ngxuxMatDialogService.getInstance(id).backLabel }}
@@ -44,7 +44,7 @@ import { NgxuxMatDialogService }    from './ngxux-mat-dialog.service';
                     </button>
 
                     <button *ngIf="ngxuxMatDialogService.getInstance(id).deleteShow"
-                            (click)="ngxuxMatDialogService.onDeleteClick(id)"
+                            (click)="ngxuxMatDialogService.onDeleteClick(id); onDeleteClick(id)"
                             mat-raised-button
                             class="delete">
 
@@ -63,7 +63,7 @@ import { NgxuxMatDialogService }    from './ngxux-mat-dialog.service';
                 <div class="buttons-right">
 
                     <button *ngIf="ngxuxMatDialogService.getInstance(id).nextShow"
-                            (click)="ngxuxMatDialogService.onNextClick(id)"
+                            (click)="ngxuxMatDialogService.onNextClick(id); onNextClick(id)"
                             mat-raised-button>
 
                         {{ ngxuxMatDialogService.getInstance(id).nextLabel }}
@@ -81,7 +81,11 @@ import { NgxuxMatDialogService }    from './ngxux-mat-dialog.service';
     styleUrls: [ './ngxux-mat-dialog.component.scss' ]
 
 })
-export class NgxuxMatDialogComponent implements OnInit {
+export class NgxuxMatDialogComponent {
+
+    @Output() public nextClick = new EventEmitter();
+    @Output() public backClick = new EventEmitter();
+    @Output() public deleteClick = new EventEmitter();
 
     @Input() public id: string;
 
@@ -89,7 +93,22 @@ export class NgxuxMatDialogComponent implements OnInit {
 
     }
 
-    ngOnInit() {
+    public onBackClick(id: string): void {
+
+        this.backClick.emit(id);
+
+    }
+
+    public onDeleteClick(id: string): void {
+
+        this.deleteClick.emit(id);
+
+    }
+
+    public onNextClick(id: string): void {
+
+        this.nextClick.emit(id);
+
     }
 
 }
