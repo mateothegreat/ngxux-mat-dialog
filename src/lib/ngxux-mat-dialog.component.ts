@@ -64,6 +64,7 @@ import { NgxuxMatDialogService }                  from './ngxux-mat-dialog.servi
 
                     <button *ngIf="ngxuxMatDialogService.getInstance(id).nextShow"
                             (click)="ngxuxMatDialogService.onNextClick(id); onNextClick(id)"
+                            [disabled]="!nextEnabled"
                             mat-raised-button>
 
                         {{ ngxuxMatDialogService.getInstance(id).nextLabel }}
@@ -88,6 +89,7 @@ export class NgxuxMatDialogComponent {
     @Output() public deleteClick = new EventEmitter();
 
     @Input() public id: string;
+    @Input() public nextEnabled: boolean;
 
     public constructor(public ngxuxMatDialogService: NgxuxMatDialogService) {
 
