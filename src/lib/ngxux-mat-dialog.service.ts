@@ -57,7 +57,6 @@ export class NgxuxMatDialogService {
 
         if (this.instances[ id ].backLabel === 'Cancel') {
 
-            this.backClick.emit(id);
             this.close(id);
 
         }
@@ -66,13 +65,11 @@ export class NgxuxMatDialogService {
 
     public onDeleteClick(id: string): void {
 
-        this.deleteClick.emit(id);
 
     }
 
     public onNextClick(id: string): void {
 
-        this.nextClick.emit(id);
 
     }
 
