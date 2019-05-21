@@ -32,12 +32,9 @@ export class NgxuxMatDialogService {
 
         dialogSettings.dialogRef = this.matDialog.open(componentRef, _config);
 
-
         dialogSettings.dialogRef.afterClosed().subscribe(() => {
 
             delete this.instances[ dialogSettings.id ];
-
-            console.log(this.instances);
 
         });
 
@@ -46,8 +43,6 @@ export class NgxuxMatDialogService {
     }
 
     public close(id: string): void {
-
-        console.log(this.instances);
 
         this.instances[ id ].dialogRef.close();
 
@@ -65,11 +60,9 @@ export class NgxuxMatDialogService {
 
     public onDeleteClick(id: string): void {
 
-
     }
 
     public onNextClick(id: string): void {
-
 
     }
 

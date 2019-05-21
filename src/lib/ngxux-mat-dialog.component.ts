@@ -9,7 +9,7 @@ import { NgxuxMatDialogService }                  from './ngxux-mat-dialog.servi
 
         <div class="wrapper">
 
-            <div class="header">
+            <div class="header" [style.background]="headerBackground">
 
                 <div class="title">
 
@@ -25,13 +25,13 @@ import { NgxuxMatDialogService }                  from './ngxux-mat-dialog.servi
 
             </div>
 
-            <div class="content">
+            <div class="content" [style.background]="contentBackground">
 
                 <ng-content></ng-content>
 
             </div>
 
-            <div class="footer">
+            <div class="footer" [style.background]="footerBackground">
 
                 <div class="buttons-left">
 
@@ -89,7 +89,11 @@ export class NgxuxMatDialogComponent {
     @Output() public deleteClick = new EventEmitter();
 
     @Input() public id: string;
-    @Input() public nextEnabled: boolean;
+    @Input() public nextEnabled: boolean = false;
+
+    @Input() public headerBackground: string = '#FEFFFE';
+    @Input() public contentBackground: string = '#FEFFFE';
+    @Input() public footerBackground: string = '#FEFFFE';
 
     public constructor(public ngxuxMatDialogService: NgxuxMatDialogService) {
 
