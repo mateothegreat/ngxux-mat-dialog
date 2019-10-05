@@ -91,6 +91,7 @@ export class NgxuxMatDialogComponent {
     @Input() public id: string;
     @Input() public nextEnabled: boolean;
     @Input() public nextShow: boolean = true;
+
     @Input() public footerShow: boolean = true;
 
     @Input() public headerBackground: string = '#FEFFFE';
